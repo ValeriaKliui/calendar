@@ -1,6 +1,8 @@
 let daysNumber = document.querySelector('.days-number');
 let buttonNext = document.querySelector('.button-next');
 let buttonPrevious = document.querySelector('.button-previous');
+let monthName = document.querySelector('.month-name');
+let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
 createCalendar(daysNumber, 11, 2022, false);
 
@@ -15,7 +17,8 @@ function createCalendar(container, month, year, insert) {
         else dayNum.replaceWith(dayNum);
         container.firstElementChild.style.gridColumn = date.getDay();
     }
-    console.log(date.getFullYear(), date.getMonth())
+    console.log(date.getMonth(), date.getFullYear())
+    monthName.innerHTML = (months[date.getMonth()]);
 }
 function howMuchDays(month, year) {
     let firstMonth = new Date(year, month, 1);
@@ -23,25 +26,19 @@ function howMuchDays(month, year) {
     return Math.round((secondMonth - firstMonth) / 1000 / 3600 / 24);
 }
 let data = new Date(2022, 11);
-let monthDecreaseCounter = decreaseNum(data.getMonth());
-
+let counter = makeCounter(data.getMonth());
 buttonPrevious.onclick = ()=>{
-createCalendar(daysNumber, monthDecreaseCounter(), 2022, true)
+createCalendar(daysNumber, counter.decrease(), 2022, true);
 }
-function decreaseNum(number) {
-    number--;
-    return function () {
-        return number--;
+function makeCounter(num) {
+    let count = num;
+    function counter() {
+      return ++count;
     }
-}
-let monthIncreaseCounter = increaseNum(data.getMonth());
-buttonNext.onclick = ()=>{
-createCalendar(daysNumber, monthIncreaseCounter(), 2022, true)
-}
-function increaseNum(number) {
-    number++;
-    return function () {
-        return number++;
-    }
-}
+    counter.decrease = () => --count;
+    return counter;
+  }
 
+  buttonNext.onclick = ()=>{
+      createCalendar(daysNumber, counter(), 2022, true);
+}
