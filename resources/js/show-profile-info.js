@@ -1,6 +1,4 @@
 let userInfo = document.querySelector('.user-information');
-showWindowSize();
-showLanguage();
 
 function showWindowSize() {
     let windowWidth = document.querySelector('.width');
@@ -17,3 +15,8 @@ function showLanguage() {
     userInfo.append(language);
 }
 
+if (sessionStorage.getItem('name')) {
+    userInfo.style.display = 'block';
+    showWindowSize();
+    showLanguage();    
+}
