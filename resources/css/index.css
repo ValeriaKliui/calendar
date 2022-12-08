@@ -108,6 +108,72 @@ img {
     color: #F8C02E;
     cursor: pointer;
 }
-.user-information {
-    display: none;
+
+.main-content__wrapper {
+    padding-top: 100px;
+}
+
+.info__block {
+    display: flex;
+}
+
+.info__text {
+    max-width: 600px;
+}
+
+.info__title {
+    color: #E14545;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.info__subtitle {
+    margin-bottom: 35px;
+}
+
+.info__photo {
+    max-width: 500px;
+    height: 500px;
+}
+
+.info-content {
+    margin-bottom: 70px;
+}
+
+.opportunities__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+.opportunity {
+    width:330px;
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
+}
+.opportunity_plans{
+    background: url('../img/plans.svg') no-repeat;
+    background-size: 100%;
+}
+.opportunity_head {
+    background: url('../img/bg1.svg') no-repeat;
+    background-size: 100%;
+}
+.opportunity_girl {
+    background: url('../img/girl.svg') no-repeat;
+    background-size: 100%;
+}
+.opportunity__icon {
+    margin: 10px auto 0 auto;
+    display: block;
+    width: 150px;
+    height: 150px;
+}
+.opportunity__text {
+    display: block;
+    margin-bottom: 90px;
+}
+.footer {
+    font-size: 14px;
 }

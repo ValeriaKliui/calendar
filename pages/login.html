@@ -5,43 +5,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../resources/img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../resources/css/login.css">
     <title>Login</title>
 </head>
 
 <body>
-    <div class="wrapper">
-        <nav class="navigation">
-            <li class="navigation__item">
-                <a href="index.html">
-                    Main
+    <header class="header">
+        <div class="wrapper header__wrapper">
+            <div class="logo">
+                <a href="../pages/index.html">
+                    <img class='logo__pic' src="../resources/img/calendar.png" alt="logo">
                 </a>
-            </li>
-            <li class="navigation__item">
+            </div>
+            <nav class="navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a href="index.html">
+                            Main
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="profile.html">
+                            Profile
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="info.html">
+                            Info
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="authorized-user">
                 <a href="profile.html">
-                    Profile
+                    <p class="username"></p>
                 </a>
-            </li>
-            <li class="navigation__item">
-                <a href="info.html">
-                    Info
-                </a>
-            </li>
-            <li class="navigation__item username"></li>
-        </nav>
-        <form action="#" onsubmit="return false;">  
-            <!-- action="../resources/js/login.js" -->
-            <label for="name">
-                Name:
-                <input type="text"id='username'>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="log-in">
+            <div class="wrapper form__wrapper">
+                <form action="#" onsubmit="return false;" class="form-login">
+                    <div class='from__container'>
+                    <div class="form">
+                        <input type="text" id='username' class="form__input" placeholder="Name">
+                </div>
+                <div class="form">
+                        <input type="password" id="password" class="password-field form__input" placeholder="Password">
+                </div> 
+                <div class="form form-show-password">
+                <input id='visibility' type="checkbox" class="visibility-of-password">
+                <label for="visibility" class="visibility-of-password__text">
+                    Show password
             </label>
-            <label for="password">
-                Password:
-                <input type="password" id="password">
-            </label>
-            <input type="submit" class="submit-button">
-        </form>
-    </div>
+            </div>
+            </div>
+                <input type="submit" class="submit-button button button-login" value="Log in">
+                </form>
+            </div>
+        </section>
+    </main>
 </body>
+<script  src="../resources/js/show-authorized-user.js"></script>
+<script src="../resources/js/show-the-password.js"></script>
 <script type="module" src="../resources/js/login.js"></script>
 <script src="../resources/js/check-availability-of-profile.js"></script>
 </html>

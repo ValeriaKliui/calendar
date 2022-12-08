@@ -4,7 +4,8 @@
     border: .5px solid black;
     text-align: center;
 }
-.day {
+
+ .day {
     border: .5px solid black;
 }
 .days-number {
@@ -12,7 +13,27 @@
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(5, 1fr);
     text-align: center;
+    cursor: pointer;
 }
 .month-selection {
     display: flex;
 }
+.day-number__container {
+    position: relative;
+}
+.day-number__field {
+    background-color: transparent;
+    cursor: pointer;
+}
+.day-number {
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    z-index: -10;
+}
+.day-number__field:focus:hover {
+    background-color: #fff;
+}
+.day-number__field:hover {
+    background-color: rgba(232, 204, 26, 0.301);
+} 

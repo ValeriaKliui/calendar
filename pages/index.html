@@ -1,42 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../resources/img/favicon.ico">
+    <link rel="stylesheet" href="../resources/css/index.css">
     <title>Test task</title>
 </head>
+
 <body>
-    <div class="wrapper">
-        <nav class="navigation">
-            <li class="navigation__item">
-               <a href="index.html">
-                 Main
+    <header class="header">
+        <div class="wrapper header__wrapper">
+            <div class="logo">
+                <a href="../pages/index.html">
+                    <img class='logo__pic' src="../resources/img/calendar.png" alt="logo">
                 </a>
-            </li>
-            <li class="navigation__item">
+            </div>
+            <nav class="navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a href="index.html">
+                            Main
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="profile.html">
+                            Profile
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="info.html">
+                            Info
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="authorized-user">
                 <a href="profile.html">
-                    Profile
-                   </a>   
-            </li>
-            <li class="navigation__item">
-                <a href="info.html">
-                    Info
-                   </a>   
-            </li>
-            <li class="navigation__item username"></li>
-        </nav>
-    <form action="login.html">
-    <button class="button-login">
-        Log in
-    </button>
-    </form>
-    <button class="button-logout">
-        Log out
-    </button>
-</div> 
+                    <p class="username"></p>
+                </a>
+            </div>
+            <form action="login.html" class="button-login">
+                <button class="button button-login">
+                    Log in
+                </button>
+            </form>
+            <button class="button button-logout">
+                Log out
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="info-content">
+            <div class="wrapper main-content__wrapper">
+                <div class="info__block">
+                    <div class="info__text">
+                        <h1 class="info__title">
+                            Task planner and best daily planner online
+                        </h1>
+                        <h2>
+                            A planner created for you
+                        </h2>
+                        <p class="info__subtitle">
+                            Planner designed to help you manage life in one place.
+                        </p>
+                        <a href="profile.html">
+                            <button class="button button-main">
+                                Get started
+                            </button>
+                        </a>
+                    </div>
+                    <div class="info__photo">
+                        <img src="../resources/img/main-section.png" alt="main">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="opportunities">
+            <div class="wrapper">
+                <div class="opportunities__container">
+                    <div class="opportunity opportunity_head">
+                        <img class='opportunity__icon' src="../resources/img/amnesia.png" alt="">
+                        <p class="opportunity__text">
+                            Keep your mind clean
+                        </p>
+                    </div>
+                    <div class="opportunity opportunity_plans">
+                        <img class='opportunity__icon' src="../resources/img/plans.png" alt="">
+                        <p class="opportunity__text">
+                            Make plans easily    
+                        </p>
+                    </div>
+                    <div class="opportunity opportunity_girl">
+                        <img class='opportunity__icon' src="../resources/img/girl.png" alt="">
+                        <p class="opportunity__text">
+                            Don't waste time in vain
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+<footer class="footer">
+    <div class="wrapper header__wrapper">
+        <div class="logo">
+                <p class="email">valeriakliui@gmail.com</p>
+        </div>
+       <div class="author">
+        <a class='credits' href='https://github.com/ValeriaKliui' target="blank">
+            Made by Lera Kliui
+        </a>
+       </div>       
+</footer>
 </body>
+<script src="../resources/js/active-page.js"></script>
 <script src="../resources/js/show-authorized-user.js"></script>
 <script src="../resources/js/check-availability-of-profile.js"></script>
 <script src="../resources/js/logout.js"></script>
+
 </html>

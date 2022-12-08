@@ -4,37 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../resources/img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../resources/css/profile.css">
     <title>Profile</title>
 </head>
 <body>
-    <div class="wrapper">
-        <nav class="navigation">
-            <li class="navigation__item">
-               <a href="index.html">
-                 Main
+    <header class="header">
+        <div class="wrapper header__wrapper">
+            <div class="logo">
+                <a href="../pages/index.html">
+                    <img class='logo__pic' src="../resources/img/calendar.png" alt="logo">
                 </a>
-            </li>
-            <li class="navigation__item">
+            </div>
+            <nav class="navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a href="index.html">
+                            Main
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="profile.html">
+                            Profile
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="info.html">
+                            Info
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="authorized-user">
                 <a href="profile.html">
-                    Profile
-                   </a>   
-            </li>
-            <li class="navigation__item">
-                <a href="info.html">
-                    Info
-                   </a>   
-            </li>
-            <li class="navigation__item username"></li>
-        </nav>
-    <form action="login.html">
-        <button class="button-login">
-            Log in
-        </button>
-        </form>
-    <button class="button-logout">
-        Log out
-    </button>
+                    <p class="username"></p>
+                </a>
+            </div>
+            <form action="login.html" class="button-login">
+                <button class="button button-login">
+                    Log in
+                </button>
+            </form>
+            <button class="button button-logout">
+                Log out
+            </button>
+        </div>
+    </header>
     <div class="user-information">
         <p class="width">
             Screen width:

@@ -1,9 +1,9 @@
 let username = sessionStorage.getItem('name');
 let buttonLogIn = document.querySelector('.button-login');
+let iconOfUser = document.querySelector('.authorized-user');
+
 function removeButtonLogIn() {
-    if (username) {
         buttonLogIn.hidden = true;
-    }
 }
 function showUsername() {
     let usernameBlock = document.querySelector('.username');
@@ -13,4 +13,7 @@ function showUsername() {
 if (sessionStorage.getItem('name')) {
     showUsername();
     removeButtonLogIn();
+}
+if (!sessionStorage.getItem('name')) {
+    iconOfUser.hidden=true;
 }
