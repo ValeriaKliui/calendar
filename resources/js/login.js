@@ -2,8 +2,9 @@ import {user} from './user-data.js';
 
 let usernameInput = document.querySelector('#username');
 let passwordInput = document.querySelector('#password');
-
 let button = document.querySelector('.submit-button');
+let wrongMessage = document.querySelector('.wrong-message');
+wrongMessage.hidden = true;
 
 button.onclick =()=> {
  if (usernameInput.value === user.username && +passwordInput.value === user.password){
@@ -11,5 +12,7 @@ button.onclick =()=> {
     sessionStorage.setItem('name', user.username);
     sessionStorage.setItem('password', user.password);
 }
-else alert('Имя пользователя или пароль введены неверно');
+else {
+    wrongMessage.hidden = false;
+};
 }

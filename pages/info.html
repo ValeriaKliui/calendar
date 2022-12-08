@@ -1,44 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../resources/img/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <link rel="stylesheet" href="../resources/css/info.css">
+    <title>Info</title>
 </head>
+
 <body>
-    <div class="wrapper">
-        <nav class="navigation">
-            <li class="navigation__item">
-               <a href="index.html">
-                 Main
+    <header class="header">
+        <div class="wrapper header__wrapper">
+            <div class="logo">
+                <a href="../pages/index.html">
+                    <img class='logo__pic' src="../resources/img/calendar.png" alt="logo">
                 </a>
-            </li>
-            <li class="navigation__item">
+            </div>
+            <nav class="navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a href="index.html">
+                            Main
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="profile.html">
+                            Profile
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="info.html">
+                            Info
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="authorized-user">
                 <a href="profile.html">
-                    Profile
-                   </a>   
-            </li>
-            <li class="navigation__item">
-                <a href="info.html">
-                    Info
-                   </a>   
-            </li>
-            <li class="navigation__item username"></li>
-        </nav>
-    <form action="login.html">
-        <button class="button-login">
-            Log in
-        </button>
-        </form>
-    <button class="button-logout">
-        Log out
-    </button>
-</div> 
+                    <p class="username"></p>
+                </a>
+            </div>
+            <form action="login.html" class="button-login">
+                <button class="button button-login">
+                    Log in
+                </button>
+            </form>
+            <button class="button button-logout">
+                Log out
+            </button>
+        </div>
+    </header>
+    <main>
+        <section class="info">
+            <div class="wrapper info__wrapper">
+                    <img class='info__photo' src="../resources/img/ppp.png" alt="">
+                    <div class="info__text">
+                    <h1>
+                        Plan for a better day
+                    </h1>
+                    <p>
+                        To enhance your productivity, Personal Planner is built around a week calendar view without any
+                        hourly scheduling. We’d say it’s the best view to organize your life and work without stress.
+                    </p>
+                    <h3>Get a fresh start daily to focus on what’s really important.
+                    </h3>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="wrapper header__wrapper">
+            <div class="logo">
+                <p class="email">valeriakliui@gmail.com</p>
+            </div>
+            <div class="author">
+                <a class='credits' href='https://github.com/ValeriaKliui' target="blank">
+                    Made by Lera Kliui
+                </a>
+            </div>
+    </footer>
 </body>
 <script type="module" src="../resources/js/show-authorized-user.js"></script>
 <script src="../resources/js/check-availability-of-profile.js"></script>
 <script src="../resources/js/logout.js"></script>
+
 </html>

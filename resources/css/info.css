@@ -22,6 +22,7 @@ a {
 h1 {
     font-size: 64px;
     line-height: 75px;
+    margin: 0;
 }
 
 h2 {
@@ -108,75 +109,22 @@ img {
     color: #F8C02E;
     cursor: pointer;
 }
-.form__wrapper {
+.user-information {
+    display: none;
+}
+.info {
+    padding: 50px 0;
+}
+.info__wrapper {
     display: flex;
-    justify-content: center;
-    padding-top: 110px;
-}
-.form {
-    display: grid-block;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-  .from__container {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 30px;
-    margin-bottom: 30px;
-  }
-  .form__input {
-    border: 3px #F8C02E solid;
-    border-radius: 10px;
-    padding: 20px;
-    width: 500px;
-    font-size: 30px;
-  }
-  .form__input::placeholder {
-    font-size: 30px;
-    font-family: 'Montserrat', sans-serif;
-  }
-.form__text {
-    font-size: 30px;
-}
-.submit-button {
-display: block;
-margin: 0 auto;
-}
-.visibility-of-password {
-    width: 30px;
-    height: 30px;
-}
-.form-show-password {
-    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
-.visibility-of-password__text {
-display: flex;
-    cursor: pointer;
-    font-size: 16px;
+.info__photo{
+    max-width: 600px;
 }
-.visibility-of-password[type="checkbox"] {
-    display: none;
-  }
-  
-  .visibility-of-password__text:before {
-    content: url(../img/eye.svg);
+.info__text {
     display: flex;
-    margin-right: 10px;
-    width: 25px;
-    height: 25px;
-    opacity: 0.5;
-  }
-   
-  .visibility-of-password:checked + .visibility-of-password__text:before {
-    content: url(../img/closed-eye.svg);
-    display: flex;
-  }
-.button-login {
-    margin-bottom: 80px;
-}
-.wrong-message__text {
-    color:#D94343;
-    font-weight: 600;
-    margin: 0;
+    flex-direction: column;
+    max-width: 400px;
 }
