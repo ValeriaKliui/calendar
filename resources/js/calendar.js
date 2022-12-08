@@ -59,35 +59,38 @@ function addPlanText(cell) {
     selectedCell = cell;
     selectedCell.textContent = planText;
 }
-let planText; 
+let planText;
 let allPlans = [];
 if (localStorage.getItem('allplans')) {
     allPlans.push(localStorage.getItem('allplans'));
 }
-function createEvent(key, i, value){
-    value.onchange = ()=>{
-    localStorage.setItem(`${key}${i}`, value.value);
-    allPlans.push(i, localStorage.getItem(`${key}${i}`));
-    localStorage.setItem('allplans', allPlans);
+function createEvent(key, i, value) {
+    value.oninput = () => {
+        localStorage.setItem(`${key}${i}`, value.value);
+        allPlans.push(i, localStorage.getItem(`${key}${i}`));
+        localStorage.setItem('allplans', allPlans);
     }
     planText = value.value;
 }
+
 let dayNum = document.querySelectorAll('.day-number');
 let dayNumField = document.querySelectorAll('.day-number__field');
-showPlans();
-function showPlans(){
-let plansAndDates =sliceIntoChunks(allPlans.map(x=>x.split(','))[0], 2);
-for (let array of plansAndDates){
-   if (array[0] === dayNum.item(0).textContent){
-    dayNumField[0].value = array[1];
-   }
+pickDates();
+
+function pickDates() {
+    let plansAndDates = sliceIntoChunks(allPlans.map(x => x.split(','))[0], 2);
+   if (plansAndDates) {for (let i = 0; i < plansAndDates.length; i++) {
+        dayNumField[plansAndDates[i][0] - 1].value = plansAndDates[i][1];
+    }
 }
 }
 function sliceIntoChunks(arr, chunkSize) {
     const res = [];
+    if (arr){
     for (let i = 0; i < arr.length; i += chunkSize) {
         const chunk = arr.slice(i, i + chunkSize);
         res.push(chunk);
     }
+}
     return res;
 }
