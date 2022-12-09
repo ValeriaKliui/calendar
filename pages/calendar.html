@@ -4,17 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="../resources/img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../resources/img/favicon.ico">
     <link rel="stylesheet" href="../resources/css/calendar.css">
-    <title>Calendar</title>
-</head>
+    <title>Calendar</title></head>
 <body>
+    <header class="header">
+        <div class="wrapper header__wrapper">
+            <div class="logo">
+                <a href="../pages/index.html">
+                    <img class='logo__pic' src="../resources/img/calendar.png" alt="logo">
+                </a>
+            </div>
+            <nav class="navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a href="index.html">
+                            Main
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="profile.html">
+                            Profile
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="info.html">
+                            Info
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="authorized-user">
+                <a href="profile.html">
+                    <p class="username"></p>
+                </a>
+            </div>
+            <form action="login.html" class="button-login">
+                <button class="button button-login">
+                    Log in
+                </button>
+            </form>
+            <button class="button button-logout">
+                Log out
+            </button>
+        </div>
+    </header>
+    <main>
+        <section class="calendar-section">
+            <div class="wrapper">
     <div class="calendar">
         <div class="month-selection">
-        <button class="button-previous"><</button>
+        <button class="button-previous button-month"><</button>
         <p class="month-name"></p>
-        <button class="button-next">></button>
+        <button class="button-next button-month">></button>
     </div>
         <div class="days-of-week">
             <div class="day">Monday</div>
@@ -27,6 +72,24 @@
         </div>
         <div class="days-number"></div>
     </div>
+</div>
+</section>
+</main>
+    <footer class="footer">
+        <div class="wrapper header__wrapper">
+            <div class="logo">
+                    <p class="email">valeriakliui@gmail.com</p>
+            </div>
+           <div class="author">
+            <a class='credits' href='https://github.com/ValeriaKliui' target="blank">
+                Made by Lera Kliui
+            </a>
+           </div>       
+    </footer>    
 </body>
+<script src="../resources/js/active-page.js"></script>
+<script src="../resources/js/show-authorized-user.js"></script>
+<script src="../resources/js/check-availability-of-profile.js"></script>
+<script src="../resources/js/logout.js"></script>
 <script src="../resources/js/calendar.js"></script>
 </html>

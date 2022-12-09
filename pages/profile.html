@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,55 +10,65 @@
     <link rel="stylesheet" href="../resources/css/profile.css">
     <title>Profile</title>
 </head>
+
 <body>
     <header class="header">
         <div class="wrapper header__wrapper">
-            <div class="logo">
-                <a href="../pages/index.html">
-                    <img class='logo__pic' src="../resources/img/calendar.png" alt="logo">
-                </a>
-            </div>
+            <div class="logo"> <a href="../pages/index.html"> <img class='logo__pic' src="../resources/img/calendar.png"
+                        alt="logo"> </a> </div>
             <nav class="navigation">
                 <ul class="navigation__list">
-                    <li class="navigation__item">
-                        <a href="index.html">
-                            Main
-                        </a>
-                    </li>
-                    <li class="navigation__item">
-                        <a href="profile.html">
-                            Profile
-                        </a>
-                    </li>
-                    <li class="navigation__item">
-                        <a href="info.html">
-                            Info
-                        </a>
-                    </li>
+                    <li class="navigation__item"> <a href="index.html"> Main </a> </li>
+                    <li class="navigation__item"> <a href="profile.html"> Profile </a> </li>
+                    <li class="navigation__item"> <a href="info.html"> Info </a> </li>
                 </ul>
             </nav>
-            <div class="authorized-user">
-                <a href="profile.html">
+            <div class="authorized-user"> <a href="profile.html">
                     <p class="username"></p>
-                </a>
-            </div>
-            <form action="login.html" class="button-login">
-                <button class="button button-login">
-                    Log in
-                </button>
+                </a> </div>
+            <form action="login.html" class="button-login"> <button class="button button-login"> Log in </button>
             </form>
-            <button class="button button-logout">
-                Log out
-            </button>
+            <button class="button button-logout"> Log out </button>
         </div>
     </header>
     <main>
-         <a href="calendar.html">
-            open calendar
-         </a>
+        <section class="profile-info">
+            <div class="wrapper profile-info__wrapper">
+                <a href="calendar.html">
+                    <h2 class="profile-info__title">
+                        Open My calendar
+                    </h2>
+                </a>
+                <div class="plans">
+                    <h3 class="profile-info__subtitle"> Your plans on December</h3>
+                    <div class="plan"></div>
+                    <form action="calendar.html" class="button-login">
+                        <button class="button button-calendar"> Make plans </button>
+                    </form>
+                </div>
+                <div class="no-plans">
+                    <h3 class="profile-info__subtitle"> Make Your plans on December in calendar</h3>
+                    <form action="calendar.html" class="button-login">
+                        <button class="button button-calendar"> Calendar </button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
-</div> 
+    <footer class="footer">
+        <div class="wrapper header__wrapper">
+            <div class="logo">
+                    <p class="email">valeriakliui@gmail.com</p>
+            </div>
+           <div class="author">
+            <a class='credits' href='https://github.com/ValeriaKliui' target="blank">
+                Made by Lera Kliui
+            </a>
+           </div>       
+    </footer>    
 </body>
-<script  src="../resources/js/show-authorized-user.js"></script>
+<script src="../resources/js/show-plans.js"></script>
+<script src="../resources/js/show-authorized-user.js"></script>
 <script src="../resources/js/logout.js"></script>
+
 </html>

@@ -6,7 +6,7 @@ let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'A
 
 createCalendar(daysNumber, 11, 2022, false);
 
-function createCalendar(container, month, year, insert) {
+function createCalendar(container, month, year, exist) {
     let daysAmount = howMuchDays(month, year);
     let date = new Date(year, month);
     for (let i = 1; i <= daysAmount; i++) {
@@ -17,12 +17,15 @@ function createCalendar(container, month, year, insert) {
         let dayNum = document.createElement('p');
         dayNum.className = 'day-number';
         dayNum.innerHTML = `${i}`;
-        if (!insert) {
+        if (!exist) {
             container.append(dayNumContainer);
             dayNumContainer.append(addEventField);
             dayNumContainer.append(dayNum);
         }
-        else dayNumContainer.replaceWith(dayNumContainer);
+        else 
+        {
+            container.append(dayNumContainer);
+        };
         container.firstElementChild.style.gridColumn = date.getDay();
     }
     console.log(date.getMonth(), date.getFullYear())
@@ -53,7 +56,7 @@ let selectedCell;
 daysNumber.onclick = function (event) {
     let target = event.target;
     createEvent("event", target.closest('.day-number__container').lastChild.textContent, target);
-    addPlanText(target.closest('.day-number__container').lastChild);
+    addPlanText(target.closest('.day-number__container').firstChild);
 }
 function addPlanText(cell) {
     selectedCell = cell;

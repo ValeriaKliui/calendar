@@ -99,7 +99,7 @@ img {
 
 .navigation__item:hover,
 .username:hover,
-.active, .credits:hover {
+.active, .credits:hover, h2:hover {
     transition: all 0.2s;
     color: #D94343;
 }
@@ -110,4 +110,40 @@ img {
 }
 .user-information {
     display: none;
+}
+main {
+    min-height: calc(100vh - 170px);
+}
+.profile-info{
+    padding-top: 50px;
+}
+.profile-info__title {
+    text-align: center;
+}
+.profile-info__subtitle {
+    text-align: center;
+}
+.plans {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.plan {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 200px;
+}
+.plan-date {
+    font-weight: 600;
+}
+.plan-text {
+    max-width: 150px;
+    word-wrap: break-word;
+}
+.button-calendar {
+    display: block;
+    margin: 0 auto;
+}
+.footer {
+    font-size: 14px;
 }

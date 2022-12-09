@@ -1,12 +1,133 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    font-size: 64px;
+    line-height: 75px;
+}
+
+h2 {
+    font-size: 36px;
+    line-height: 47px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+    color: #000000;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+.wrapper {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo__pic {
+    width: 80px;
+    height: 80px;
+}
+
+.button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    background-color: #D94343;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    padding: 15px;
+    width: 180px;
+    height: 55px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.button:hover {
+    font-size: 20px;
+    color: #ffe29a;
+}
+
+.header {
+    padding: 5px 0;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation__item {
+    cursor: pointer;
+}
+
+.navigation__item+.navigation__item {
+    margin-left: 70px;
+}
+
+.navigation__item:hover,
+.username:hover,
+.active, .credits:hover {
+    transition: all 0.2s;
+    color: #D94343;
+}
+
+.username {
+    color: #F8C02E;
+    cursor: pointer;
+}
+
+main {
+    min-height: calc(100vh - 170px);
+}
+.calendar-section {
+    padding: 50px 0;
+}
+.calendar {
+    background: #EDEDED;
+    border-radius: 20px;
+    padding: 20px;
+}
 .days-of-week {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    border: .5px solid black;
     text-align: center;
 }
 
- .day {
-    border: .5px solid black;
+ .day +.day {
+    border-left: .5px solid #EB4436;
 }
 .days-number {
     display: grid;
@@ -15,8 +136,34 @@
     text-align: center;
     cursor: pointer;
 }
+.day-number__field {
+    height: 100px;
+    width: 150px;
+    border: 1px solid #fafafa;
+    padding: 30px;
+    word-wrap: break-word;
+}
 .month-selection {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.month-name {
+    font-weight: 600;
+    color: #EB4436;
+}
+.button-month {
+    border: none;
+    border-radius: 25px;
+    background-color: #EB4436;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 25px;
+}
+.button-month:hover {
+    transition: all 0.2s;
+    color:#EB4436;
 }
 .day-number__container {
     position: relative;
@@ -29,11 +176,14 @@
     position: absolute;
     top: -15px;
     left: 20px;
-    z-index: -10;
+    color: rgba(0, 0, 10, 0.49);
 }
 .day-number__field:focus:hover {
     background-color: #fff;
 }
 .day-number__field:hover {
-    background-color: rgba(232, 204, 26, 0.301);
+    background-color: rgba(235,68,54, 0.1);
 } 
+.footer {
+    font-size: 14px;
+}
