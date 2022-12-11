@@ -53,10 +53,13 @@ buttonNext.onclick = () => {
     createCalendar(daysNumber, counter(), 2022, true);
 }
 let selectedCell;
+let eventField = document.querySelector('.day-number__field');
 daysNumber.onclick = function (event) {
     let target = event.target;
+    if(event.target.outerHTML ==eventField.outerHTML) {
     createEvent("event", target.closest('.day-number__container').lastChild.textContent, target);
     addPlanText(target.closest('.day-number__container').firstChild);
+    }
 }
 function addPlanText(cell) {
     selectedCell = cell;
@@ -82,11 +85,16 @@ pickDates();
 
 function pickDates() {
     let plansAndDates = sliceIntoChunks(allPlans.map(x => x.split(','))[0], 2);
-   if (plansAndDates) {for (let i = 0; i < plansAndDates.length; i++) {
+    let searchField = document.querySelector('.search-field');
+   if (plansAndDates) {
+    for (let i = 0; i < plansAndDates.length; i++) {
         dayNumField[plansAndDates[i][0] - 1].value = plansAndDates[i][1];
+        dayNumField[plansAndDates[i][0] - 1].classList.add('active-cell');
     }
 }
 }
+
+
 function sliceIntoChunks(arr, chunkSize) {
     const res = [];
     if (arr){

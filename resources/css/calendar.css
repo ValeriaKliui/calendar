@@ -184,6 +184,9 @@ main {
 .day-number__field:hover {
     background-color: rgba(235,68,54, 0.1);
 } 
+.active-cell {
+    background-color: rgba(255, 100, 54, 0.2);
+}
 .footer {
     font-size: 14px;
 }
